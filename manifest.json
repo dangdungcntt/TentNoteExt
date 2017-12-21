@@ -1,0 +1,27 @@
+{
+    "manifest_version": 2,
+    "name": "TentStudy",
+    "version": "1.0",
+    "description": "Made by TentStudy",
+    "browser_action": {
+      "default_icon": "images/icon.png",
+      "default_popup": "html/popup.html"
+    },
+    "icons": {
+      "16": "images/icon.png",
+      "32": "images/icon.png",
+      "128": "images/icon.png"
+    },
+    "permissions": [
+      "tabs",
+      "contextMenus",
+      "http://*/*",
+      "https://*/*"
+    ],
+    "background": { 
+      "scripts": [
+        "js/jquery.min.js",
+        "js/script.js"
+      ]
+    }
+  }
