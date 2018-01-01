@@ -4,7 +4,7 @@ String.isNullOrEmpty = function(value) {
 
 function shortUrl(url) {
   return $.ajax({
-    url: 'https://short.tentstudy.xyz/api.php',
+    url: 'http://short.dangdung.xyz/api.php',
     method: 'post',
     data: { url },
     dataType: 'json'
@@ -13,7 +13,7 @@ function shortUrl(url) {
 
 function saveNote(content) {
   return $.ajax({
-    url: "https://note.tentstudy.xyz/actions/addnewlink.php", 
+    url: "http://note.dangdung.xyz/actions/addnewlink.php", 
     method: 'post',
     data: { link: content }, 
     dataType: 'json'
@@ -73,7 +73,7 @@ function selectText(info) {
 }
 
 function openNote() {
-  openNewTab('https://note.tentstudy.xyz');
+  openNewTab('http://note.dangdung.xyz');
 }
 
 const root = chrome.contextMenus.create({
@@ -89,21 +89,21 @@ chrome.contextMenus.create({
 });
 
 chrome.contextMenus.create({
-  title: "Lưu trang note.tentstudy.xyz", 
+  title: "Lưu trang note.dangdung.xyz", 
   contexts:["page"], 
   parentId: root,
   onclick: clickLink,
 });
 
 chrome.contextMenus.create({
-  title: "Lưu nội dung vào note.tentstudy.xyz", 
+  title: "Lưu nội dung vào note.dangdung.xyz", 
   contexts:["selection"], 
   parentId: root,
   onclick: selectText,
 });
 
 chrome.contextMenus.create({
-  title: "Mở note.tentstudy.xyz", 
+  title: "Mở note.dangdung.xyz", 
   contexts:["all"], 
   parentId: root,
   onclick: openNote,
